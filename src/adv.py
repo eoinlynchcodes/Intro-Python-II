@@ -39,6 +39,11 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 
+player = {
+    'outside': Room("Outside Cave Entrance",
+                     "North of you, the cave mount beckons")
+}
+
 # Write a loop that:
 #
 # * Prints the current room name
@@ -49,3 +54,13 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+for item in player:
+    print(item)
+
+
+input = input('Enter a direction:')
+if input == 'q':
+    exit()
+else: 
+    print(input)
